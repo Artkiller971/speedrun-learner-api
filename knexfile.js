@@ -11,7 +11,7 @@ const migrations = {
 export default() =>({
   client: 'sqlite3',
   connection: {
-    filename: './db/dev.sqlite3',
+    filename: './db/dev.db',
   },
   migrations,
   useNullAsDefault: true,

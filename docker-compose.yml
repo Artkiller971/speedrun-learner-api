@@ -2,11 +2,11 @@ services:
   app:
     build: .
     volumes:
-      - sqlite_data:/db/dev.sqlite3
+      - sqlite_data:/db
     environment:
       - NODE_ENV=development
     command: >
-      sh -c "make migrate && make start"
+      sh -c "mkdir db && make migrate && make start"
     ports:
       - "3003:3003"
 
